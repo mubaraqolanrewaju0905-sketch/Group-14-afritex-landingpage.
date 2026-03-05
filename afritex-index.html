@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AFRITEX — African Fashion Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="afritex-styles.css"/>
+</head>
+<body>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+    <a href="#how">How It Works</a>
+    <a href="#features">Features</a>
+    <a href="#designers">Designers</a>
+    <a href="#about">About</a>
+    <button class="btn-outline" style="width:200px">Log In</button>
+    <button class="btn-primary" style="width:200px">Join Free</button>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="nav-logo" href="#" style="font-size: 2.2rem; font-weight: 700; color: #050705;">AFRI<span>TEX</span></a>
+    <ul class="nav-links">
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#designers">Designers</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="btn-outline">Log In</button>
+      <button class="btn-primary">Join Free</button>
+    </div>
+    <div class="hamburger" onclick="openMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">Pan-African Fashion Marketplace</div>
+      <h1 class="hero-title">
+        Africa's Fashion<br/>Deserves a
+        <em>Real Stage.</em>
+      </h1>
+      <p class="hero-subtitle">
+        AFRITEX connects independent African fashion designers with customers across the continent — with professional storefronts, secure payments, and real order management. No more DMs.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary">Start Selling Free</button>
+        <button class="btn-outline">Explore Designers</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">$110B</div>
+          <div class="stat-label">E-Commerce Market '29</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2M+</div>
+          <div class="stat-label">Designers in Africa</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">70%</div>
+          <div class="stat-label">Selling via DMs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="designer-card">
+          <div class="card-img"><div class="card-img-bg a">👘</div></div>
+          <div class="card-verified">Verified</div>
+          <div class="card-name">Zara Fashions</div>
+          <div class="card-loc">Lagos, Nigeria</div>
+          <div class="card-price">From ₦18,500</div>
+        </div>
+        <div class="designer-card">
+          <div class="card-img"><div class="card-img-bg b">🧣</div></div>
+          <div class="card-verified">Verified</div>
+          <div class="card-name">Kente House</div>
+          <div class="card-loc">Accra, Ghana</div>
+          <div class="card-price">From GHS 240</div>
+        </div>
+        <div class="designer-card">
+          <div class="card-img"><div class="card-img-bg c">👗</div></div>
+          <div class="card-verified">Verified</div>
+          <div class="card-name">Maasai Threads</div>
+          <div class="card-loc">Nairobi, Kenya</div>
+          <div class="card-price">From KES 3,200</div>
+        </div>
+        <div class="designer-card">
+          <div class="card-img"><div class="card-img-bg d">🎽</div></div>
+          <div class="card-verified">Verified</div>
+          <div class="card-name">Adire Studio</div>
+          <div class="card-loc">Ibadan, Nigeria</div>
+          <div class="card-price">From ₦12,000</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item">ANKARA</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">KENTE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">ADIRE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">BOGOLAN</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">KITENGE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">ENYIMBA</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">SHWESHWE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">NDOP</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">ASO-OKE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">ANKARA</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">KENTE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">ADIRE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">BOGOLAN</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">KITENGE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">ENYIMBA</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">SHWESHWE</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">NDOP</span><span class="ticker-dot">◆</span>
+      <span class="ticker-item">ASO-OKE</span><span class="ticker-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="section-label reveal">How It Works</div>
+    <h2 class="section-title reveal">From Instagram DMs<br/>to a Real Business.</h2>
+    <p class="section-sub reveal">AFRITEX replaces scattered DM conversations with a structured, professional commerce flow — in three simple steps.</p>
+    <div class="how-grid reveal">
+      <div class="how-step">
+        <div class="step-num">01</div>
+        <div class="step-icon">🏪</div>
+        <h3 class="step-title">Build Your Storefront</h3>
+        <p class="step-desc">Register, get verified, and build a professional branded storefront with your logo, bio, and full product catalogue. Go live in under 24 hours.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">02</div>
+        <div class="step-icon">🛍️</div>
+        <h3 class="step-title">Customers Discover & Order</h3>
+        <p class="step-desc">Shoppers across Africa and the diaspora find your work through our discovery engine — filtered by style, fabric, occasion, and location. Orders arrive in your dashboard automatically.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">03</div>
+        <div class="step-icon">💰</div>
+        <h3 class="step-title">Fulfil & Get Paid</h3>
+        <p class="step-desc">Ship the order, mark it done, and receive your payout every week. Paystack and Flutterwave handle all the payment complexity — so you focus on designing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="feat-header">
+      <div>
+        <div class="section-label reveal">Platform Features</div>
+        <h2 class="section-title reveal">Everything You Need.<br/>Nothing You Don't.</h2>
+      </div>
+      <button class="btn-primary reveal" style="white-space:nowrap">See All Features</button>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon">✅</div>
+        <h3 class="feat-title">Verified Storefronts</h3>
+        <p class="feat-desc">Every designer completes ID & portfolio verification. Customers shop with full confidence knowing every seller is authentic.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">🔐</div>
+        <h3 class="feat-title">Secure Checkout</h3>
+        <p class="feat-desc">Cart, checkout, and payment via Paystack & Flutterwave. Instant email confirmation for buyers and sellers.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">📊</div>
+        <h3 class="feat-title">Analytics Dashboard</h3>
+        <p class="feat-desc">See your best-selling products, peak order days, revenue trends, and customer demographics — all in one place.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">🔍</div>
+        <h3 class="feat-title">Discovery Engine</h3>
+        <p class="feat-desc">Algolia-powered search lets customers filter by style, occasion, fabric type, designer city, and price range.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">📦</div>
+        <h3 class="feat-title">Order Management</h3>
+        <p class="feat-desc">Every order lands in your dashboard with full customer details, size selection, and delivery address. Zero DM management.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">⭐</div>
+        <h3 class="feat-title">Ratings & Reviews</h3>
+        <p class="feat-desc">Build social proof that outlasts any Instagram story. Customer reviews are verified, public, and boost your discovery ranking.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">📱</div>
+        <h3 class="feat-title">Mobile-First Design</h3>
+        <p class="feat-desc">Designed for Africa's smartphone-first consumers. Blazing fast on 3G and fully responsive on every device.</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">🚀</div>
+        <h3 class="feat-title">Growth Promotions</h3>
+        <p class="feat-desc">Boost your storefront or specific products with transparent, performance-tracked ad campaigns starting from $5/day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGNERS SHOWCASE -->
+  <section class="showcase" id="designers">
+    <div class="showcase-header reveal">
+      <div>
+        <div class="section-label">Featured Designers</div>
+        <h2 class="section-title">Meet the Creators<br/>Behind the Craft.</h2>
+      </div>
+      <button class="btn-outline">Browse All Designers →</button>
+    </div>
+    <div class="designers-grid">
+      <div class="designer-tile reveal">
+        <div class="designer-tile-bg dt-a">👘</div>
+        <div class="designer-tile-overlay">
+          <div class="dt-name">Amaka Ankara Studio</div>
+          <div class="dt-city">Lagos, Nigeria</div>
+          <span class="dt-badge">✓ Verified · 48 Sales</span>
+        </div>
+      </div>
+      <div class="designer-tile reveal">
+        <div class="designer-tile-bg dt-b">🧣</div>
+        <div class="designer-tile-overlay">
+          <div class="dt-name">Kente Heritage Co.</div>
+          <div class="dt-city">Accra, Ghana</div>
+          <span class="dt-badge">✓ Verified · 127 Sales</span>
+        </div>
+      </div>
+      <div class="designer-tile reveal">
+        <div class="designer-tile-bg dt-c">👗</div>
+        <div class="designer-tile-overlay">
+          <div class="dt-name">Savanna Threads</div>
+          <div class="dt-city">Nairobi, Kenya</div>
+          <span class="dt-badge">✓ Verified · 89 Sales</span>
+        </div>
+      </div>
+      <div class="designer-tile reveal">
+        <div class="designer-tile-bg dt-d">🎽</div>
+        <div class="designer-tile-overlay">
+          <div class="dt-name">Adire Collective</div>
+          <div class="dt-city">Ibadan, Nigeria</div>
+          <span class="dt-badge">✓ Verified · 203 Sales</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <div class="stats-banner">
+    <div class="banner-stat reveal">
+      <span class="banner-num" data-target="110">0</span><span class="banner-num" style="font-size:2rem">B</span>
+      <div class="banner-label">E-Commerce Market by 2029</div>
+    </div>
+    <div class="banner-stat reveal">
+      <span class="banner-num" data-target="2">0</span><span class="banner-num" style="font-size:2rem">M+</span>
+      <div class="banner-label">Independent Designers in Africa</div>
+    </div>
+    <div class="banner-stat reveal">
+      <span class="banner-num" data-target="70">0</span><span class="banner-num" style="font-size:2rem">%</span>
+      <div class="banner-label">Still Selling via Social DMs</div>
+    </div>
+    <div class="banner-stat reveal">
+      <span class="banner-num" data-target="65">0</span><span class="banner-num" style="font-size:2rem">%</span>
+      <div class="banner-label">Designers Are Women-Led</div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial" id="about">
+    <div class="test-inner reveal">
+      <p class="test-quote">
+        "Talented African designers are invisible online — not because they lack skill, but because they lack the platform. AFRITEX changes that."
+      </p>
+      <div class="test-author">
+        <div class="test-avatar">👤</div>
+        <div>
+          <div class="test-name">Sikirat Aderogba</div>
+          <div class="test-role">Lead Product Manager · AFRITEX · TechCrush Capstone 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="reveal">
+      <h2 class="cta-title">
+        Ready to Sell<br/>
+        <span>Like a Professional?</span>
+      </h2>
+    </div>
+    <div class="cta-right reveal">
+      <p class="cta-desc">
+        Join AFRITEX for free today. Build your storefront, list your products, and start receiving real orders — no DMs, no chaos, no missed sales.
+      </p>
+      <div class="cta-actions">
+        <button class="btn-white">Start Selling Free</button>
+        <button class="btn-ghost-white">Shop African Fashion</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#">AFRI<span>TEX</span></a>
+        <p>Africa's most trusted digital fashion marketplace. Empowering independent designers across the continent with the platform they deserve.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#">For Designers</a></li>
+          <li><a href="#">For Shoppers</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Features</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 AFRITEX. All rights reserved. Built by <strong>Group 14 · TechCrush Capstone 2025</strong>.</span>
+      <span>🌍 Lagos · Accra · Nairobi</span>
+    </div>
+  </footer>
+
+  <script src="afritex-script.js"></script>
+</body>
+</html>
