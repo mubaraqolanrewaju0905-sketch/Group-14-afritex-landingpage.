@@ -291,7 +291,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-img-wrap img {
   background: transparent;
-  mix-blend-mode: multiply;
+  mix-blend-mode: transparent;
 }
 /* ── Divider ── */
 .divider { border: none; border-top: 1px solid var(--border); }
