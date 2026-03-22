@@ -118,7 +118,59 @@ img { max-width: 100%; display: block; }
     font-size: 24px;
   }
 }
+/* ── MOBILE — search bar moves below header ── */
+@media (max-width: 768px) {
 
+  /* Stack the topbar vertically */
+  .topbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: .75rem 1rem;
+  }
+
+  /* Top row — logo + icons stay on one line */
+  .topbar-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: .75rem 1rem;
+    gap: .5rem;
+  }
+
+  /* Search bar drops to second row */
+  .topbar-search {
+    display: flex;              /* ✅ show it on mobile */
+    order: 3;                   /* ✅ pushes it below logo and icons */
+    width: 100%;                /* ✅ full width on second row */
+    max-width: 100%;
+    margin-top: .25rem;
+  }
+
+  /* Logo stays left */
+  .topbar-logo {
+    order: 1;
+    flex: 1;
+  }
+
+  /* Icons + hamburger stay right */
+  .topbar-actions {
+    order: 2;
+    margin-left: auto;
+  }
+
+  /* Hide login and signup — they go in mobile nav */
+  .btn-login,
+  .btn-signup,
+  .btn-sell { display: none; }
+
+  /* Show hamburger */
+  .hamburger-btn { display: flex; }
+
+  /* Mobile nav starts below the 2-row header */
+  .mobile-nav {
+    top: 110px;                 /* ✅ adjust this to match your header height */
+  }
+
+}
 /* ══════════════════════════════════════
    TOPBAR
 ══════════════════════════════════════ */
@@ -288,10 +340,6 @@ img { max-width: 100%; display: block; }
 .hero-img-wrap {
   border: transparent;
   background: transparent;
-}
-.hero-img-wrap img {
-  background: transparent;
-  mix-blend-mode: transparent;
 }
 /* ── Divider ── */
 .divider { border: none; border-top: 1px solid var(--border); }
