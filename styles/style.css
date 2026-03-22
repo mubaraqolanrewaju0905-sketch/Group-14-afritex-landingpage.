@@ -272,7 +272,7 @@ img { max-width: 100%; display: block; }
 .hero-stats { font-size: .74rem; color: var(--light); }
 
 .hero-img-wrap {
-  border: none;
+  border: transparent;
   background: none;
   padding: 0;
 }
