@@ -331,7 +331,6 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-ui); font-size: .85rem; font-weight: 600;
   color: var(--gold); background: transparent;
   border: 1.5px solid var(--gold); padding: .65rem 1.5rem;
-  
 }
 .btn-sell-designs:hover { background: var(--gold); color: var(--white); }
 
@@ -340,6 +339,7 @@ img { max-width: 100%; display: block; }
 .hero-img-wrap {
   border: transparent;
   background: transparent;
+  background-color: white;
 }
 /* ── Divider ── */
 .divider { border: none; border-top: 1px solid var(--border); }
@@ -401,13 +401,14 @@ img { max-width: 100%; display: block; }
 ══════════════════════════════════════ */
 /* ── FEATURE BANNER — using grid ── */
 .feature-banner {
-  background: #E8A020;
+  background: hsl(0, 9%, 98%);
   padding: 2rem;
 }
 
 .feature-banner-inner {
   max-width: 780px;
   margin: 0 auto;
+  background: var(--gold);
   display: grid;                          
   grid-template-columns: 1fr 1.5fr;      
   gap: 2.5rem;
