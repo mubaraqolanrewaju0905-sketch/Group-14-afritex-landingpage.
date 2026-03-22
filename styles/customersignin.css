@@ -1,9 +1,18 @@
 * { box-sizing: border-box; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
+:root {
+    --primary: #DCA436;
+    --primary-light: #FDF8ED;
+    --bg-color: #F4F6F9;
+    --text-dark: #222;
+    --text-light: #777;
+    --white: #ffffff;
+}
 
 body { 
-    background-color: #1a1a1a; 
+    background-color: var(--bg-color);
     display: flex; justify-content: center; align-items: center; min-height: 100vh;
     padding: 20px;
+    color: var(--text-dark);
 }
 
 .form-card {
@@ -15,14 +24,15 @@ body {
 
 .back-arrow {
     position: absolute; top: 20px; left: 20px;
-    background: none; border: 1px solid #ddd; border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
+    background: none; border: 1px solid var(--primary); border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
+    color: var(--primary);
 }
 
-h2 { font-size: 20px; margin-bottom: 25px; }
+h2 { font-size: 20px; margin-bottom: 25px; color: var(--text-dark); }
 
 input {
     width: 100%; padding: 12px; margin-bottom: 10px;
-    border: none; border-radius: 8px; background-color: #F5D9A5; color: #333;
+    border: none; border-radius: 8px; background-color: #F5D9A5; color: var(--text-dark);
 }
 
 .password-wrapper { position: relative; }
@@ -38,14 +48,14 @@ input {
 }
 
 .signin-btn {
-    width: 100%; padding: 12px; background-color: black; color: white;
+    width: 100%; padding: 12px; background-color: black; color: var(--white);
     border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s;
 }
 
-.signin-btn:hover { opacity: 0.8; }
+.signin-btn:hover { opacity: 0.9; }
 
-.footer-text { margin-top: 25px; font-size: 10px; color: #333; }
-.footer-text a { color: #DCA436; text-decoration: none; font-weight: 500; }
+.footer-text { margin-top: 25px; font-size: 10px; color: var(--text-dark); }
+.footer-text a { color: var(--primary); text-decoration: none; font-weight: 500; }
 
 @media (max-width: 600px) {
     body { padding: 10px; }
