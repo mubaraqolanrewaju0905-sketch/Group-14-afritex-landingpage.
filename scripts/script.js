@@ -16,7 +16,9 @@ function toggleMobileNav() {
   const nav = document.getElementById('mobileNav');
   if (nav) nav.classList.toggle('open');
 }
-
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
 // Close mobile nav when a link is clicked
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.mobile-nav a').forEach(a => {
