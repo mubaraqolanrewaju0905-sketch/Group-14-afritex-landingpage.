@@ -339,7 +339,8 @@ img { max-width: 100%; display: block; }
 .hero-img-wrap {
   border: transparent;
   background: transparent;
-  background-color: white;
+  background-image: var(--white);
+
 }
 /* ── Divider ── */
 .divider { border: none; border-top: 1px solid var(--border); }
