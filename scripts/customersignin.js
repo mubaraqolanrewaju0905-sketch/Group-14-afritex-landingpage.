@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (stored.email && stored.email.toLowerCase() === email.toLowerCase()) {
             localStorage.setItem('customerLoggedIn', 'true');
             alert('Sign in successful!');
-            // In a real app, redirect to customer dashboard or homepage
+            window.location.href = 'customerdashboard.html';
         } else {
             alert('No customer account found with that email. Please sign up first.');
         }

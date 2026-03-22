@@ -22,6 +22,15 @@
                     <input type="password" id="password" placeholder="Password" required>
                     <span class="toggle-password" data-target="password">👁️</span>
                 </div>
+
+                <div id="passwordCriteria" class="password-criteria">
+                    <p>Password must include:</p>
+                    <p><span class="crit" id="criteriaLength">✗</span> At least 8 characters</p>
+                    <p><span class="crit" id="criteriaUpper">✗</span> At least one uppercase letter</p>
+                    <p><span class="crit" id="criteriaNumber">✗</span> At least one number</p>
+                    <p><span class="crit" id="criteriaSpecial">✗</span> At least one special character</p>
+                </div>
+
                 <div class="password-wrapper">
                     <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
                     <span class="toggle-password" data-target="confirmPassword">👁️</span>
@@ -59,7 +68,7 @@
 
             <div class="social-row">
                 <button type="button" class="social-btn" id="googleBtn">Continue with <img src="../images/google-icon.png" alt="G" width="15"></button>
-                <button type="button" class="social-btn" id="appleBtn">Continue with <img src="images/apple-icon.png" alt="A" width="15"></button>
+                <button type="button" class="social-btn" id="appleBtn">Continue with <img src="../images/apple-icon.png" alt="A" width="15"></button>
             </div>
 
             <p class="signin-link">Already have an account? <a href="../pages/customersignin.html">Sign in</a></p>
