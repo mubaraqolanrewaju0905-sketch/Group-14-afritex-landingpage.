@@ -221,16 +221,30 @@ img { max-width: 100%; display: block; }
 }
 .btn-sell:hover { background: var(--gold-dark); }
 
-/* Hamburger */
+/* ── HAMBURGER BUTTON ── */
 .hamburger-btn {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: .3rem;
-}
-.hamburger-btn span {
-  display: block; width: 22px; height: 2px;
-  background: var(--black); border-radius: 2px;
+  display: none;              
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .3rem;
 }
 
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #111;          
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* ── SHOW on mobile ── */
+@media (max-width: 768px) {
+  .hamburger-btn { display: flex; }
+}
 /* ══════════════════════════════════════
    HERO
 ══════════════════════════════════════ */
@@ -273,8 +287,7 @@ img { max-width: 100%; display: block; }
 
 .hero-img-wrap {
   border: transparent;
-  background: none;
-  padding: 0;
+  background: transparent;
 }
 
 /* ── Divider ── */
@@ -344,8 +357,8 @@ img { max-width: 100%; display: block; }
 .feature-banner-inner {
   max-width: 780px;
   margin: 0 auto;
-  display: grid;                          /* ✅ changed to grid */
-  grid-template-columns: 1fr 1.5fr;      /* left = image | right = text */
+  display: grid;                          
+  grid-template-columns: 1fr 1.5fr;      
   gap: 2.5rem;
   align-items: center;
   border-radius: 16px;
@@ -368,7 +381,7 @@ img { max-width: 100%; display: block; }
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .feature-banner-inner {
-    grid-template-columns: 1fr;   /* ✅ stacks vertically on mobile */
+    grid-template-columns: 1fr;   
   }
   .feature-banner-img img {
     height: 200px;
