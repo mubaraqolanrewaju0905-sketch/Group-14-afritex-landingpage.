@@ -1,5 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('designerForm');
+    const passwordInput = document.getElementById('password');
+    const confirmInput = document.getElementById('confirmPassword');
+
+    // Function to check password criteria
+    function checkPasswordCriteria(password) {
+        document.getElementById('lengthCheck').textContent = password.length >= 8 ? '✓' : '✗';
+        document.getElementById('lengthCheck').className = password.length >= 8 ? 'criteria-symbol active' : 'criteria-symbol';
+        
+        document.getElementById('upperCheck').textContent = /[A-Z]/.test(password) ? '✓' : '✗';
+        document.getElementById('upperCheck').className = /[A-Z]/.test(password) ? 'criteria-symbol active' : 'criteria-symbol';
+        
+        document.getElementById('numberCheck').textContent = /\d/.test(password) ? '✓' : '✗';
+        document.getElementById('numberCheck').className = /\d/.test(password) ? 'criteria-symbol active' : 'criteria-symbol';
+        
+        document.getElementById('specialCheck').textContent = /[^A-Za-z0-9]/.test(password) ? '✓' : '✗';
+        document.getElementById('specialCheck').className = /[^A-Za-z0-9]/.test(password) ? 'criteria-symbol active' : 'criteria-symbol';
+    }
+
+    // Check password criteria on input
+    passwordInput.addEventListener('input', (e) => {
+        checkPasswordCriteria(e.target.value);
+    });
+
     const uploadBox = document.getElementById('uploadBox');
     const idFileInput = document.getElementById('idFile');
     const imagePreview = document.getElementById('imagePreview');
@@ -175,5 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
         profileImagePreview.style.display = 'none';
         profileUploadIcon.style.display = 'block';
         removeProfileBtn.style.display = 'none';
+
+        // Redirect to designer sign-in page
+        window.location.href = 'designersignin.html';
     });
 });

@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if customer is logged in
+    if (localStorage.getItem('customerLoggedIn') !== 'true') {
+        window.location.href = 'customersignin.html';
+        return;
+    }
+
+    // Update welcome message with user's name
+    const stored = JSON.parse(localStorage.getItem('customerProfile') || '{}');
+    const welcomeElement = document.querySelector('.main-content h2');
+    if (welcomeElement && stored.fullName) {
+        welcomeElement.textContent = `Welcome back ${stored.fullName}!`;
+    }
+
     // Update the date to current date
     const dateElement = document.querySelector('.main-content p');
     if (dateElement) {

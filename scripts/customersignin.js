@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if already logged in
+    // if (localStorage.getItem('customerLoggedIn') === 'true') {
+    //     window.location.href = 'customerdashboard.html';
+    //     return;
+    // }
+
     const form = document.getElementById('signinForm');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
@@ -25,12 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const stored = JSON.parse(localStorage.getItem('customerProfile') || '{}');
-        if (stored.email && stored.email.toLowerCase() === email.toLowerCase()) {
+        if (stored.email && stored.email.toLowerCase() === email.toLowerCase() && stored.password === password) {
             localStorage.setItem('customerLoggedIn', 'true');
             alert('Sign in successful!');
-            // In a real app, redirect to customer dashboard or homepage
+            // Redirect to customer dashboard
+            window.location.href = 'customerdashboard.html';
         } else {
-            alert('No customer account found with that email. Please sign up first.');
+            alert('Invalid email or password. Please check your credentials or sign up first.');
         }
     });
 });

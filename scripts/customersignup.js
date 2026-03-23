@@ -3,6 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.getElementById('password');
     const confirmInput = document.getElementById('confirmPassword');
 
+    // Function to check password criteria
+    function checkPasswordCriteria(password) {
+        document.getElementById('lengthCheck').textContent = password.length >= 8 ? '✓' : '✗';
+        document.getElementById('lengthCheck').className = password.length >= 8 ? 'criteria-symbol active' : 'criteria-symbol';
+        
+        document.getElementById('upperCheck').textContent = /[A-Z]/.test(password) ? '✓' : '✗';
+        document.getElementById('upperCheck').className = /[A-Z]/.test(password) ? 'criteria-symbol active' : 'criteria-symbol';
+        
+        document.getElementById('numberCheck').textContent = /\d/.test(password) ? '✓' : '✗';
+        document.getElementById('numberCheck').className = /\d/.test(password) ? 'criteria-symbol active' : 'criteria-symbol';
+        
+        document.getElementById('specialCheck').textContent = /[^A-Za-z0-9]/.test(password) ? '✓' : '✗';
+        document.getElementById('specialCheck').className = /[^A-Za-z0-9]/.test(password) ? 'criteria-symbol active' : 'criteria-symbol';
+    }
+
+    // Check password criteria on input
+    passwordInput.addEventListener('input', (e) => {
+        checkPasswordCriteria(e.target.value);
+    });
+
     // Social Login Handlers
     document.getElementById('googleBtn').addEventListener('click', (e) => {
         e.preventDefault();
@@ -55,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = {
             fullName: document.getElementById('fullName').value,
             email: document.getElementById('email').value,
+            password: pass, // Store the password
             country: document.getElementById('country').value,
             phone: document.getElementById('countryCode').value + document.getElementById('phoneNumber').value
         };
@@ -65,6 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // persist the customer profile for sign in
         localStorage.setItem('customerProfile', JSON.stringify(formData));
 
+        // Clear the form
         form.reset();
+
+        // Redirect to customer sign-in page
+        window.location.href = 'customersignin.html';
     });
 });

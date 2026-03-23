@@ -28,6 +28,14 @@
                     <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
                     <span class="toggle-password" data-target="confirmPassword">👁️</span>
                 </div>
+
+                <div class="password-criteria">
+                    <p>Password must contain:</p>
+                    <div class="criteria-item"><span id="lengthCheck" class="criteria-symbol">✗</span> At least 8 characters</div>
+                    <div class="criteria-item"><span id="upperCheck" class="criteria-symbol">✗</span> At least one uppercase letter</div>
+                    <div class="criteria-item"><span id="numberCheck" class="criteria-symbol">✗</span> At least one number</div>
+                    <div class="criteria-item"><span id="specialCheck" class="criteria-symbol">✗</span> At least one special character</div>
+                </div>
             
                 <div class="row">
                     <select id="country" class="half-width" required>
