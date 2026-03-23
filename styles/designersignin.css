@@ -1,22 +1,13 @@
 * { box-sizing: border-box; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
-:root {
-    --primary: #DCA436;
-    --primary-light: #FDF8ED;
-    --bg-color: #F4F6F9;
-    --text-dark: #222;
-    --text-light: #777;
-    --white: #ffffff;
-}
 
-body {
-    background-color: var(--bg-color);
+body { 
+    background-color: #1a1a1a; 
     display: flex; justify-content: center; align-items: center; min-height: 100vh;
     padding: 20px;
-    color: var(--text-dark);
 }
 
 .form-card {
-    background: var(--white);
+    background: white;
     width: 100%; max-width: 450px;
     padding: 35px; border-radius: 15px;
     position: relative; text-align: center;
@@ -24,14 +15,12 @@ body {
 
 .back-arrow {
     position: absolute; top: 20px; left: 20px;
-    background: none; border: 1px solid var(--primary); border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
-    color: var(--primary);
+    background: none; border: 1px solid #ddd; border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
 }
 
-h2 { font-size: 20px; margin-bottom: 25px; color: var(--text-dark); }
+h2 { font-size: 20px; margin-bottom: 25px; }
 
 input {
-    background-color: var(--primary-light); color: var(--text-dark);
     width: 100%; padding: 12px; margin-bottom: 10px;
     border: none; border-radius: 8px; background-color: #F5D9A5; color: #333;
 }
@@ -55,8 +44,8 @@ input {
 
 .signin-btn:hover { opacity: 0.8; }
 
-.footer-text { margin-top: 25px; font-size: 10px; color: var(--text-dark); }
-.footer-text a { color: var(--primary); text-decoration: none; font-weight: 500; }
+.footer-text { margin-top: 25px; font-size: 10px; color: #333; }
+.footer-text a { color: #DCA436; text-decoration: none; font-weight: 500; }
 
 @media (max-width: 600px) {
     body { padding: 10px; }

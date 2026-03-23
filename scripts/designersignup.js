@@ -43,34 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // password strength criteria indicators
-    const passwordInputDesigner = document.getElementById('password');
-    const criteriaLengthDesigner = document.getElementById('criteriaLength');
-    const criteriaUpperDesigner = document.getElementById('criteriaUpper');
-    const criteriaNumberDesigner = document.getElementById('criteriaNumber');
-    const criteriaSpecialDesigner = document.getElementById('criteriaSpecial');
-
-    function updateCriteriaVisual(password, lengthEl, upperEl, numberEl, specialEl) {
-        const isLong = password.length >= 8;
-        const hasUpper = /[A-Z]/.test(password);
-        const hasNumber = /\d/.test(password);
-        const hasSpecial = /[^A-Za-z0-9]/.test(password);
-
-        lengthEl.textContent = isLong ? '✓' : '✗';
-        upperEl.textContent = hasUpper ? '✓' : '✗';
-        numberEl.textContent = hasNumber ? '✓' : '✗';
-        specialEl.textContent = hasSpecial ? '✓' : '✗';
-
-        lengthEl.style.color = isLong ? 'green' : 'red';
-        upperEl.style.color = hasUpper ? 'green' : 'red';
-        numberEl.style.color = hasNumber ? 'green' : 'red';
-        specialEl.style.color = hasSpecial ? 'green' : 'red';
-    }
-
-    passwordInputDesigner.addEventListener('input', (e) => {
-        updateCriteriaVisual(e.target.value, criteriaLengthDesigner, criteriaUpperDesigner, criteriaNumberDesigner, criteriaSpecialDesigner);
-    });
-
     // 1. Handle ID Upload Box click (Triggers file picker)
     uploadBox.addEventListener('click', (e) => {
         // Prevent clicking the 'X' from opening the file picker

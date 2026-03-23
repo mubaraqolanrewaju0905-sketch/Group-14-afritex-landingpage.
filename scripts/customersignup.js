@@ -33,32 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const criteriaLength = document.getElementById('criteriaLength');
-    const criteriaUpper = document.getElementById('criteriaUpper');
-    const criteriaNumber = document.getElementById('criteriaNumber');
-    const criteriaSpecial = document.getElementById('criteriaSpecial');
-
-    function updateCriteria(password) {
-        const isLong = password.length >= 8;
-        const hasUpper = /[A-Z]/.test(password);
-        const hasNumber = /\d/.test(password);
-        const hasSpecial = /[^A-Za-z0-9]/.test(password);
-
-        criteriaLength.textContent = isLong ? '✓' : '✗';
-        criteriaUpper.textContent = hasUpper ? '✓' : '✗';
-        criteriaNumber.textContent = hasNumber ? '✓' : '✗';
-        criteriaSpecial.textContent = hasSpecial ? '✓' : '✗';
-
-        criteriaLength.style.color = isLong ? 'green' : 'red';
-        criteriaUpper.style.color = hasUpper ? 'green' : 'red';
-        criteriaNumber.style.color = hasNumber ? 'green' : 'red';
-        criteriaSpecial.style.color = hasSpecial ? 'green' : 'red';
-    }
-
-    passwordInput.addEventListener('input', (e) => {
-        updateCriteria(e.target.value);
-    });
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 

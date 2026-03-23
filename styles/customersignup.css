@@ -1,18 +1,9 @@
 * { box-sizing: border-box; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
-:root {
-    --primary: #DCA436;
-    --primary-light: #FDF8ED;
-    --bg-color: #F4F6F9;
-    --text-dark: #222;
-    --text-light: #777;
-    --white: #ffffff;
-}
 
 body { 
-    background-color: var(--bg-color);
+    background-color: #1a1a1a; 
     display: flex; justify-content: center; align-items: center; min-height: 100vh;
     padding: 20px;
-    color: var(--text-dark);
 }
 
 .form-card {
@@ -24,17 +15,16 @@ body {
 
 .back-arrow {
     position: absolute; top: 20px; left: 20px;
-    background: none; border: 1px solid var(--primary); border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
-    color: var(--primary);
+    background: none; border: 1px solid #ddd; border-radius: 50%; width: 30px; height: 30px; cursor: pointer;
 }
 
-h2 { font-size: 20px; margin-bottom: 25px; color: var(--text-dark); }
+h2 { font-size: 20px; margin-bottom: 25px; }
 
-.section-label { text-align: left; font-size: 15px; font-weight: 600; margin: 15px 0 8px 0; color: var(--text-dark); }
+.section-label { text-align: left; font-size: 15px; font-weight: 600; margin: 15px 0 8px 0; }
 
 input, select {
     width: 100%; padding: 12px; margin-bottom: 10px;
-    border: none; border-radius: 8px; background-color: #F5D9A5; color: var(--text-dark);
+    border: none; border-radius: 8px; background-color: #F5D9A5; color: #333;
 }
 
 .half-width { width: 50% !important; display: block; }
@@ -44,11 +34,11 @@ input, select {
 
 
 .signup-btn {
-    width: 100%; padding: 12px; background-color: black; color: var(--white);
+    width: 100%; padding: 12px; background-color: black; color: white;
     border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s;
 }
 
-.signup-btn:hover { opacity: 0.9; }
+.signup-btn:hover { opacity: 0.8; }
 
 .divider { display: flex; align-items: center; margin: 20px 0; font-size: 12px; }
 .divider hr { flex: 1; border: 0.5px solid #ddd; }
@@ -77,29 +67,6 @@ input, select {
     cursor: pointer;
     font-size: 16px;
     user-select: none;
-}
-
-.password-criteria {
-    text-align: left;
-    margin: 10px 0 20px;
-    background: #f8f2de;
-    padding: 12px;
-    border: 1px solid #e6d5a1;
-    border-radius: 8px;
-    font-size: 13px;
-    color: #333;
-}
-
-.password-criteria p {
-    margin: 4px 0;
-}
-
-.password-criteria .crit {
-    display: inline-block;
-    width: 16px;
-    text-align: center;
-    margin-right: 8px;
-    font-weight: 700;
 }
 
 @media (max-width: 600px) {

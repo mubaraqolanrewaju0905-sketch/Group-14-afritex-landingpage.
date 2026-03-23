@@ -315,6 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('designerProfile');
         localStorage.removeItem('designerProducts');
         alert('You have been logged out.');
-        window.location.href = 'index.html';
+        window.location.href = 'designersignin.html';
     });
 });
