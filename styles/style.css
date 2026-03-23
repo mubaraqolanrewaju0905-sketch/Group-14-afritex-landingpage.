@@ -118,7 +118,59 @@ img { max-width: 100%; display: block; }
     font-size: 24px;
   }
 }
+/* ── MOBILE — search bar moves below header ── */
+@media (max-width: 768px) {
 
+  /* Stack the topbar vertically */
+  .topbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: .75rem 1rem;
+  }
+
+  /* Top row — logo + icons stay on one line */
+  .topbar-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: .75rem 1rem;
+    gap: .5rem;
+  }
+
+  /* Search bar drops to second row */
+  .topbar-search {
+    display: flex;              /* ✅ show it on mobile */
+    order: 3;                   /* ✅ pushes it below logo and icons */
+    width: 100%;                /* ✅ full width on second row */
+    max-width: 100%;
+    margin-top: .25rem;
+  }
+
+  /* Logo stays left */
+  .topbar-logo {
+    order: 1;
+    flex: 1;
+  }
+
+  /* Icons + hamburger stay right */
+  .topbar-actions {
+    order: 2;
+    margin-left: auto;
+  }
+
+  /* Hide login and signup — they go in mobile nav */
+  .btn-login,
+  .btn-signup,
+  .btn-sell { display: none; }
+
+  /* Show hamburger */
+  .hamburger-btn { display: flex; }
+
+  /* Mobile nav starts below the 2-row header */
+  .mobile-nav {
+    top: 110px;                 /* ✅ adjust this to match your header height */
+  }
+
+}
 /* ══════════════════════════════════════
    TOPBAR
 ══════════════════════════════════════ */
@@ -221,16 +273,30 @@ img { max-width: 100%; display: block; }
 }
 .btn-sell:hover { background: var(--gold-dark); }
 
-/* Hamburger */
+/* ── HAMBURGER BUTTON ── */
 .hamburger-btn {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: .3rem;
-}
-.hamburger-btn span {
-  display: block; width: 22px; height: 2px;
-  background: var(--black); border-radius: 2px;
+  display: none;              
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .3rem;
 }
 
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #111;          
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+/* ── SHOW on mobile ── */
+@media (max-width: 768px) {
+  .hamburger-btn { display: flex; }
+}
 /* ══════════════════════════════════════
    HERO
 ══════════════════════════════════════ */
@@ -265,18 +331,18 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-ui); font-size: .85rem; font-weight: 600;
   color: var(--gold); background: transparent;
   border: 1.5px solid var(--gold); padding: .65rem 1.5rem;
-  
 }
 .btn-sell-designs:hover { background: var(--gold); color: var(--white); }
 
 .hero-stats { font-size: .74rem; color: var(--light); }
 
 .hero-img-wrap {
-  border: none;
-  background: none;
-  padding: 0;
-}
+  border: transparent;
+  background: transparent;
+  background-image: var(--white) url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60');
+  background-size: cover; background-position: center;
 
+}
 /* ── Divider ── */
 .divider { border: none; border-top: 1px solid var(--border); }
 
@@ -337,15 +403,16 @@ img { max-width: 100%; display: block; }
 ══════════════════════════════════════ */
 /* ── FEATURE BANNER — using grid ── */
 .feature-banner {
-  background: #E8A020;
+  background: hsl(0, 9%, 98%);
   padding: 2rem;
 }
 
 .feature-banner-inner {
   max-width: 780px;
   margin: 0 auto;
-  display: grid;                          /* ✅ changed to grid */
-  grid-template-columns: 1fr 1.5fr;      /* left = image | right = text */
+  background: var(--gold);
+  display: grid;                          
+  grid-template-columns: 1fr 1.5fr;      
   gap: 2.5rem;
   align-items: center;
   border-radius: 16px;
@@ -368,7 +435,7 @@ img { max-width: 100%; display: block; }
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .feature-banner-inner {
-    grid-template-columns: 1fr;   /* ✅ stacks vertically on mobile */
+    grid-template-columns: 1fr;   
   }
   .feature-banner-img img {
     height: 200px;
